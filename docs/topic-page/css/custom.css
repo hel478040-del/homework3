@@ -1,0 +1,51 @@
+/* ========================================
+   书影音推荐墙 · Bootstrap覆盖样式
+   ======================================== */
+
+/* 自定义紫色（Bootstrap 默认无紫色） */
+.bg-purple {
+  background-color: #9b59b6 !important;
+}
+
+.btn-outline-purple {
+  color: #9b59b6;
+  border-color: #9b59b6;
+}
+
+.btn-outline-purple:hover {
+  background-color: #9b59b6;
+  border-color: #9b59b6;
+}
+
+/* 区块标题统一样式 */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #e74c3c;
+}
+
+/* 卡片悬浮效果 */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 卡片标题统一品牌色 */
+.card .card-title {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* 响应式：窄屏调整 */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+}
