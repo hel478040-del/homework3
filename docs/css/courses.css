@@ -1,0 +1,129 @@
+/* ========================================
+   前端课程墙 · 纯CSS版
+   ======================================== */
+
+/* ---------- 1. 全局重置与基础设置 ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  color: #333;
+  background: #f8f9fa;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- 2. 页面头部 header ---------- */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Logo 紫色 */
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* 导航链接蓝色 */
+.main-nav a {
+  font-size: 14px;
+  color: #0969da;
+}
+
+/* ---------- 3. 主要内容区 main ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* "全部课程" 标题 */
+main h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* ---------- 4. 课程卡片网格 ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- 5. 单个课程卡片 ---------- */
+.course-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;       /* 圆角 */
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);  /* 微阴影 */
+  display: flex;
+  flex-direction: column;    /* 内容垂直排列 */
+  gap: 8px;
+}
+
+/* 课程标题 - 加粗黑色 */
+.course-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 课程描述 - 灰色 */
+.course-card p {
+  font-size: 14px;
+  color: #666;
+  flex: 1;                   /* 占满中间空间 */
+}
+
+/* "查看详情"链接 - 紫色 */
+.course-card a {
+  font-size: 14px;
+  color: #6f42c1;
+  align-self: flex-start;     /* 链接靠左对齐 */
+}
+
+/* ---------- 6. 页面底部 footer ---------- */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 12px;
+  color: #999;
+}
+
+footer p {
+  color: #999;
+}
+
+/* ---------- 7. 响应式：窄屏适配 ---------- */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;  /* 窄屏单列 */
+  }
+}
